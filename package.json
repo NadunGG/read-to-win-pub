@@ -1,0 +1,20 @@
+{
+  "name": "read-to-win-pub",
+  "version": "1.0.0",
+  "description": "A backend service to keep tab on books and their authors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"
+  },
+  "author": "Nadun Gunawardana",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "node-cron": "^3.0.2",
+    "validator": "^13.9.0",
+    "winston": "^3.9.0"
+  }
+}
