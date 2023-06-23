@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "6494430feb4207e93158d054"
+  },
+  "isbn": "9558415049",
+  "category": "Children",
+  "title": "MadolDoova",
+  "author": {
+    "$oid": "64941d792d66368537def9e0"
+  },
+  "likeCount": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649443f8eb4207e93158d05a"
+  },
+  "isbn": "9789556808704",
+  "category": "Educational",
+  "title": "AGuideToPrescribedPoetry",
+  "author": {
+    "$oid": "6494399972475cd20e910838"
+  },
+  "likeCount": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64947b4b21b3bbaf16ba0031"
+  },
+  "isbn": "9789558415436",
+  "category": "Historical",
+  "title": "Gamperaliya",
+  "author": {
+    "$oid": "64941d792d66368537def9e0"
+  },
+  "likeCount": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649516303d52865509452c28"
+  },
+  "isbn": "9780140185508",
+  "category": "Indian-Literature",
+  "title": "TheVendorOfSweets",
+  "author": {
+    "$oid": "649514ee3d52865509452c21"
+  },
+  "likeCount": 1,
+  "__v": 0
+}]

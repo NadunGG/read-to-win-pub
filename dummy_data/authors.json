@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "64941d792d66368537def9e0"
+  },
+  "firstName": "Martin",
+  "lastName": "Wickramasinghe",
+  "email": "martinw@gmail.com",
+  "contactNo": "0771234567",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6494399972475cd20e910838"
+  },
+  "firstName": "Sarath",
+  "lastName": "Silva",
+  "email": "saraths@gmail.com",
+  "contactNo": 777654321,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649514ee3d52865509452c21"
+  },
+  "firstName": "RK",
+  "lastName": "Narayan",
+  "email": "rknarayan@outlook.com",
+  "contactNo": 771112223,
+  "__v": 0
+}]
