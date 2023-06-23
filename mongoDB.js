@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const remoteDbUrl = process.env.DB_URL;
 const localDbUrl = 'mongodb://localhost:27017/bookstore';
 const mongoDB = async function () {
   await mongoose
-    .connect(remoteDbUrl || localDbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(localDbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
       console.log('MONGO CONNECTION OPEN!');
     })
