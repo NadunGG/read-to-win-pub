@@ -6,7 +6,9 @@ This Backend Service is intended to keep track of book records and their authors
 ## Pre-requisites
 1. MongoDB Installation
 - Install MongoDB by following the tutorial mentioned [here](https://www.prisma.io/dataguide/mongodb/setting-up-a-local-mongodb-database).
+- (Optional) Install MongoDBCompass for ease of importing dummy-data to local mongoDB
 2. Node JS Runtime - Simply download & install it from [here](https://nodejs.org/en/download).
+  
 3. Node Package Manager
 * Run the following command on your terminal
  ```sh
@@ -24,8 +26,8 @@ This Backend Service is intended to keep track of book records and their authors
 ```
 3. Open Command Line Terminal inside the Root of the Project
   >  ex: `PS E:\read-to-win-pub>`
-5. First Execute, execute `npm install` to install the dependencies
-6. Then, execute `npm run dev` to run the server on local port `5000`.
+5. First, execute `npm install` to install the dependencies
+6. Then, execute `npm run dev` to start the server on local port `5000`.
 
 ## Setting Up Dummy Data
 1. After setting up above, you can move onto importing the data collections provided in `/dummy_data` dir
@@ -41,6 +43,7 @@ This Backend Service is intended to keep track of book records and their authors
 * collections - `authors` & `books`
 ```
 - Follow, the given tutorial [here](https://www.geeksforgeeks.org/import-data-to-mongodb/). 
+- If this seems hefty, try with [MongoDB Compass](https://www.mongodb.com/try/download/compass) for easier importing.
 
 ## Resources
 This Server consists of two main sub-routes
@@ -49,10 +52,12 @@ This Server consists of two main sub-routes
 - BaseURL - 'localhost:5000'
 * You can follow these links via `baseurl/links`format.
 > ex: `POST http://localhost:5000/books`
+- Note: When passing body parameters, setup `Content-Type` header to `application/x-www-form-urlencoded`
 
 ### Author
 This will be used to carryout Author related transactions in DB.
 > `POST /authors/`- This will be used to create new authors in DB
+
 - this request requires 4 mandatory body parameters
   ```
   firstName - String, simple+capital-letters-only
@@ -60,6 +65,10 @@ This will be used to carryout Author related transactions in DB.
   email - String , email-format-check[xxxx@yyy.zz]
   contactNo - Number[0-9], Length[10]
   ```
+#### Request 
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/948a4a10-0fbd-4484-afae-71351d5185c9)
+#### Response
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/67dcf31c-1ad8-4e1c-9310-aab8dacca1dc)
 
 ### Books
 This will be used to carryout Book related transactions in DB.
@@ -71,14 +80,30 @@ This will be used to carryout Book related transactions in DB.
   title - String , alphanumerics-only
   authorId - Author ObjectID - created when adding a new author
   ```
-  
-> `GET /books/:isbn - this will be used to find a book in DB with its ISBN.
+#### Request 
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/a595bd66-df10-463d-a811-3d7d3c2f75f0)
+#### Response
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/ad47257d-b207-4bf6-97ea-ef642f4443d3)
 
-> `PUT /books/:id/like - this will be used to handle user likes to a specific book.
+
+> `GET /books/:isbn - this will be used to find a book in DB with its ISBN.
+- Here, `:isbn` will be replaced with Book's ISBN number.
+#### Request 
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/05bf7a30-05df-45be-9ad1-9b3d2f316283)
+#### Response
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/541c94cf-eaa3-4d15-827d-e14cd4aaa4bd)
+
+> `PUT /books/:id/like - this will be used to handle when a user likes a specific book.
+- Here, `:id` will be replaced with Book's DB ObjectID (Which is set when the book is created).
+- This will increase likeCount { type: Number, defaultValue:0 } property of the book by 1.
+#### Request 
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/4dffb985-bd1e-492b-bbc0-834135bdba26)
+#### Response
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/283fc858-b987-41e4-bed8-fed065514c6a)
 
 ## Logging
 
-Server Logs are availble in `logs/` Dir
+Server Logs are available in `logs/` Dir
 * There are 2 types of logging in this server
 1. Event Logging - This is done for every request in the app and saved in `logs/server.log` 
 2. Author Popularity Logging 
