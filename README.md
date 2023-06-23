@@ -66,9 +66,10 @@ This will be used to carryout Author related transactions in DB.
   contactNo - Number[0-9], Length[10]
   ```
 #### Request 
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/948a4a10-0fbd-4484-afae-71351d5185c9)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/0dec659f-b953-4278-86cc-1f5648015cda)
+
 #### Response
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/67dcf31c-1ad8-4e1c-9310-aab8dacca1dc)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/4191d791-e7a9-42e0-a535-9fe3d2bfb77a)
 
 ### Books
 This will be used to carryout Book related transactions in DB.
@@ -81,25 +82,24 @@ This will be used to carryout Book related transactions in DB.
   authorId - Author ObjectID - created when adding a new author
   ```
 #### Request 
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/a595bd66-df10-463d-a811-3d7d3c2f75f0)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/fb9a0ecb-cd04-46ab-8ade-92f1302fff79)
 #### Response
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/ad47257d-b207-4bf6-97ea-ef642f4443d3)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/df542eec-d90e-4213-9a8e-6588cd6da5ec)
 
-
-> `GET /books/:isbn - this will be used to find a book in DB with its ISBN.
+> `GET /books/:isbn` - this will be used to find a book in DB with its ISBN.
 - Here, `:isbn` will be replaced with Book's ISBN number.
 #### Request 
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/05bf7a30-05df-45be-9ad1-9b3d2f316283)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/ceb03335-95dd-4c3b-bb7a-4c7f80805cc9)
 #### Response
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/541c94cf-eaa3-4d15-827d-e14cd4aaa4bd)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/52e5c8d6-935e-4d55-b68b-65201f42d161)
 
-> `PUT /books/:id/like - this will be used to handle when a user likes a specific book.
+> `PUT /books/:id/like` - this will be used to handle when a user likes a specific book.
 - Here, `:id` will be replaced with Book's DB ObjectID (Which is set when the book is created).
 - This will increase likeCount { type: Number, defaultValue:0 } property of the book by 1.
 #### Request 
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/4dffb985-bd1e-492b-bbc0-834135bdba26)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/b08f0a6a-0e6e-4256-8e75-1cefba785798)
 #### Response
-![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/283fc858-b987-41e4-bed8-fed065514c6a)
+![image](https://github.com/NadunGG/read-to-win-pub/assets/80123728/33e6048a-e464-4072-b812-756a840d8b90)
 
 ## Logging
 
