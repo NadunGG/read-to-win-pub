@@ -105,7 +105,8 @@ This will be used to carryout Book related transactions in DB.
 
 Server Logs are available in `logs/` Dir
 * There are 2 types of logging in this server
-1. Event Logging - This is done for every request in the app and saved in `logs/server.log` 
+1. Event Logging - This is done for every request in the app and saved in `logs/server.log`
+   
 2. Author Popularity Logging 
 - This is done per a 5 mins-step Schedule, where a report is generated on each Author's like Count every 5 mins.
 - Saved in `logs/authorPopularity/likesCount.log`
